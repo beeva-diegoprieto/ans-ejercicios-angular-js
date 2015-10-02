@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp2">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../bower_components/angular/angular.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../bower_components/ng-table/dist/ng-table.css">
+    <script src="../bower_components/ng-table/dist/ng-table.min.js"></script>
+    <script>
+        var miAppAngular = angular.module("myApp2", ['ngTable']);
+         miAppAngular.controller("tableController",['$scope','ngTableParams', '$http',
+                 function($scope,ngTableParams,$http)
+                 {
+                    var responsePromise = $http.get("file.json");
+                    responsePromise.success(function(data, status, headers, config)
+                    {
+                        $scope.tableParams = new ngTableParams({page: 1, count: 10}, { data: data.frutas});
+                    });
+                 }
+         ]);
+    </script>
+</head>
+<body>
+
+<div ng-controller="tableController">
+    <table ng-table="tableParams" class="table" show-filter="false">
+        <tr ng-repeat="fruta in $data">
+            <td>
+                {{fruta.nombre}}</td>
+            <td>
+                {{fruta.cantidad}}</td>
+         </tr>
+    </table>
+</div>
+</body>
+</html>
