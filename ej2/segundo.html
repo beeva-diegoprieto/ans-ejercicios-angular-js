@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <meta charset="utf-8">
+    <title>Ejercicio 1.2 Angular</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.3/angular.min.js"></script>
+    <script>
+        var miAppAngular = angular.module("myApp",[]);
+        miAppAngular.controller("table_controller", function($scope){
+           return $scope.values=["Pepe","Juan","Miguel","Adrian"];
+        });
+    </script>
+
+</head>
+<body>
+    <table ng-controller="table_controller">
+        <tr ng-repeat="x in values">
+            <td>value {{ $index }}</td>
+            <td>{{ x }}</td>
+        </tr>
+    </table>
+</body>
+</html>
