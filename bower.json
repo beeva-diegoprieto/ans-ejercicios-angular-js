@@ -1,0 +1,21 @@
+{
+  "name": "ans-ejercicios-angular-js",
+  "version": "0.2.1",
+  "homepage": "https://github.com/beeva-manueldepaz/ans-ejercicios-angular-js",
+  "authors": [
+    "Manuel Eusebio de Paz Carmona <manuel.depaz@beeva.com>",
+    "David García Carbayo <david.garcia@beeva.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.4",
+    "jquery": "~2.1.4"
+  }
+}
