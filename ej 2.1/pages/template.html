@@ -1,0 +1,7 @@
+<table ng-controller="membersController">
+    <tr ng-repeat='x in org'>
+        <td><img width="50px" src="{{x.avatar_url}}"/></td>
+        <td>{{ x.login }}</td>
+        <td><a href="{{x.html_url}}">{{x.html_url}}</a></td>
+    </tr>
+</table>

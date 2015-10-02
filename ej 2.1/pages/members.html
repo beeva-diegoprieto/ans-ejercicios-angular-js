@@ -1,0 +1,5 @@
+<h1>This is the MEMBERS PAGE</h1>
+<p>Nombre de la organizacion:</p>
+<input type="text" ng-model="org_name" ng-change="change(org_name)" placeholder="Escribe la organization" width="80">
+<p>Miembros de la organizacion {{org_name}}:</p>
+<github-team  team="{{org_name}}"></github-team>
